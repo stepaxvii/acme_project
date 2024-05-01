@@ -23,6 +23,12 @@ class Birthday(models.Model):
         verbose_name = 'День рождения'
         verbose_name_plural = 'дни рождения'
         ordering = ('id',)
+        constraints = (
+            models.UniqueConstraint(
+                fields=('first_name', 'last_name', 'birthday'),
+                name='Unique person constaint',
+            ),
+        )
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
