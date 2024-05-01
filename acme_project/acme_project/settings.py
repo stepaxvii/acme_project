@@ -8,6 +8,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
