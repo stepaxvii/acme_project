@@ -8,10 +8,14 @@ class Birthday(models.Model):
         verbose_name='Имя',
         max_length=20
     )
-    last_name = models.CharField(
-        verbose_name='Фамилия',
+    middle_name = models.CharField(
+        verbose_name='Отчество',
         blank=True,
         help_text='Необязательное поле',
+        max_length=20
+    )
+    last_name = models.CharField(
+        verbose_name='Фамилия',
         max_length=20
     )
     birthday = models.DateField(
