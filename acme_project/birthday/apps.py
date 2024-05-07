@@ -6,4 +6,3 @@ class BirthdayConfig(AppConfig):
     name = 'birthday'
     verbose_name = 'День рождения'
     verbose_name_plusal = 'дни рождения'
-

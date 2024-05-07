@@ -25,12 +25,17 @@ LOGIN_URL = 'login'
 
 CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
+INTERNAL_IPS = [
+'127.0.0.1',
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django_bootstrap5',
+    'debug_toolbar',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
