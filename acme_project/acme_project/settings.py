@@ -16,6 +16,8 @@ EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
 
 LOGIN_REDIRECT_URL = 'pages:homepage'
 
+LOGIN_URL = 'login'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
